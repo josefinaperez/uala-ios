@@ -10,6 +10,8 @@ import UIKit
 
 class BooksListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet fileprivate var booksTable: UITableView!
+    
     fileprivate var books: [Book] = []
 
     override func viewDidLoad() {
@@ -25,7 +27,7 @@ class BooksListViewController: UIViewController, UITableViewDelegate, UITableVie
             }
             
             self.books = books
-            
+            self.booksTable.reloadData()
         })
     }
     
@@ -34,11 +36,19 @@ class BooksListViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let bookCell = tableView.dequeueReusableCell(withIdentifier: "bookCell") as? BookTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        bookCell.configureWith(book: books[indexPath.row])
+        return bookCell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 224
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
     }
 
 }

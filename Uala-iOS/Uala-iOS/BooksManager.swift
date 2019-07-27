@@ -28,6 +28,8 @@ class BooksManager: NSObject {
                 booksArray.append(Book(json: book))
             }
             
+            callback(booksArray, true)
+            
         })
     }
 

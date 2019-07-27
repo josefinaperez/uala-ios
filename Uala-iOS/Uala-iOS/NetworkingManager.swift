@@ -15,21 +15,19 @@ class NetworkingManager: NSObject {
     static let shared = NetworkingManager()
     
     public func getRequest(url: String, callback: @escaping (JSON?, Bool) -> Void) {
-        
-        Alamofire.request(url)
-            .responseJSON { response in
-                
-                if response.result.error != nil {
-                    callback(nil, false)
-                }
-                
-                guard let response = response.result.value as? Data else {
-                    callback(nil, false)
-                    return
-                }
-                
-                let json = JSON(response)
-                callback(json, true)
+        Alamofire.request(url).responseJSON { response in
+            
+            if response.result.error != nil {
+                callback(nil, false)
+            }
+            
+            guard let response = response.result.value else {
+                callback(nil, false)
+                return
+            }
+            
+            let json = JSON(response)
+            callback(json, true)
         }
     }
 }

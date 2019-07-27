@@ -16,7 +16,7 @@ class BookTableViewCell: UITableViewCell {
     @IBOutlet fileprivate var lblPopularidad: UILabel!
     @IBOutlet fileprivate var lblEstado: UILabel!
 
-    fileprivate func configureWith(book: Book) {
+    public func configureWith(book: Book) {
         //img
         lblNombre.text = book.nombre
         lblAutor.text = book.autor
