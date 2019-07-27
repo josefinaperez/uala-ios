@@ -30,4 +30,8 @@ class NetworkingManager: NSObject {
             callback(json, true)
         }
     }
+    
+    public func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
+    }
 }
