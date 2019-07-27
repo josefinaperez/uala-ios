@@ -10,13 +10,19 @@ import UIKit
 
 class BooksListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet fileprivate var booksTable: UITableView!
+     @IBOutlet fileprivate var booksTable: UITableView!
+     @IBOutlet fileprivate var btnAvailable: UIButton!
+     @IBOutlet fileprivate var btnNotAvailable: UIButton!
+     @IBOutlet fileprivate var btnAll: UIButton!
     
     fileprivate var books: [Book] = []
     fileprivate var reversedBookOrder: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        btnAll.configureAsSelected()
+        btnAvailable.configureAsUnselected()
+        btnNotAvailable.configureAsUnselected()
         getBooks()
     }
     
@@ -69,18 +75,27 @@ class BooksListViewController: UIViewController, UITableViewDelegate, UITableVie
         let booksFiltered = BooksManager.shared.filterByAvailability(available: true)
         books = BooksManager.shared.sortByPopularity(books: booksFiltered, reversed: reversedBookOrder)
         booksTable.reloadData()
+        btnAvailable.configureAsSelected()
+        btnNotAvailable.configureAsUnselected()
+        btnAll.configureAsUnselected()
     }
     
     @IBAction fileprivate func showNotAvailableBooks() {
         let booksFiltered = BooksManager.shared.filterByAvailability(available: false)
         books = BooksManager.shared.sortByPopularity(books: booksFiltered, reversed: reversedBookOrder)
         booksTable.reloadData()
+        btnNotAvailable.configureAsSelected()
+        btnAvailable.configureAsUnselected()
+        btnAll.configureAsUnselected()
     }
     
     @IBAction fileprivate func showAllBooks() {
         let booksFiltered = BooksManager.shared.getAllBooks()
         books = BooksManager.shared.sortByPopularity(books: booksFiltered, reversed: reversedBookOrder)
         booksTable.reloadData()
+        btnAll.configureAsSelected()
+        btnAvailable.configureAsUnselected()
+        btnNotAvailable.configureAsUnselected()
     }
 
 }

@@ -49,6 +49,11 @@
                                         <state key="normal" title="Invertir orden">
                                             <color key="titleColor" red="0.92941176469999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="reverseBooksOrder" destination="BYZ-38-t0r" eventType="touchUpInside" id="NhH-pK-0SQ"/>
                                         </connections>
@@ -75,6 +80,11 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQ8-nY-kAa">
                                         <rect key="frame" x="94" y="10" width="80" height="30"/>
                                         <state key="normal" title="Disponibles"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="showAvailableBooks" destination="BYZ-38-t0r" eventType="touchUpInside" id="HvW-gD-Pah"/>
                                         </connections>
@@ -82,6 +92,11 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaA-Fc-JRj">
                                         <rect key="frame" x="189" y="10" width="102" height="30"/>
                                         <state key="normal" title="No disponibles"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="showNotAvailableBooks" destination="BYZ-38-t0r" eventType="touchUpInside" id="klf-yI-SjK"/>
                                         </connections>
@@ -89,6 +104,11 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOk-R6-duH">
                                         <rect key="frame" x="306" y="10" width="42" height="30"/>
                                         <state key="normal" title="Todos"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="showAllBooks" destination="BYZ-38-t0r" eventType="touchUpInside" id="5QU-EO-SnS"/>
                                         </connections>
@@ -200,6 +220,9 @@
                     <navigationItem key="navigationItem" id="qqy-YB-90o"/>
                     <connections>
                         <outlet property="booksTable" destination="Qdh-GD-zIh" id="41e-1e-7VR"/>
+                        <outlet property="btnAll" destination="JOk-R6-duH" id="qOq-Fl-hhR"/>
+                        <outlet property="btnAvailable" destination="OQ8-nY-kAa" id="sHs-VM-Qxx"/>
+                        <outlet property="btnNotAvailable" destination="MaA-Fc-JRj" id="vya-Wu-URN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
