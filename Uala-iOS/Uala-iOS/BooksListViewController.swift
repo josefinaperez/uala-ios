@@ -26,7 +26,7 @@ class BooksListViewController: UIViewController, UITableViewDelegate, UITableVie
                 return
             }
             
-            self.books = books
+            self.books = books.sorted(by: { $0.popularidad > $1.popularidad })
             self.booksTable.reloadData()
         })
     }
