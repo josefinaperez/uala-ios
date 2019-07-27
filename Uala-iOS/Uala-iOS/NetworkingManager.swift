@@ -8,12 +8,13 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class NetworkingManager: NSObject {
     
     static let shared = NetworkingManager()
     
-    public func getRequest(url: String, callback: @escaping ([String : Any]?, Bool) -> Void) {
+    public func getRequest(url: String, callback: @escaping (JSON?, Bool) -> Void) {
         
         Alamofire.request(url)
             .responseJSON { response in
@@ -22,7 +23,7 @@ class NetworkingManager: NSObject {
                     callback(nil, false)
                 }
                 
-                guard let json = response.result.value as? [String: Any] else {
+                guard let json = response.result.value as? JSON else {
                     callback(nil, false)
                     return
                 }
