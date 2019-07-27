@@ -12,9 +12,9 @@ import SwiftyJSON
 class BooksManager: NSObject {
     
     static let shared = BooksManager()
-    let getBooksUrl = "https://qodyhvpf8b.execute-api.us-east-1.amazonaws.com/test/books"
+    fileprivate let getBooksUrl = "https://qodyhvpf8b.execute-api.us-east-1.amazonaws.com/test/books"
     
-    fileprivate func getBooks(callback: @escaping ([Book]?, Bool) -> Void) {
+    public func getBooks(callback: @escaping ([Book]?, Bool) -> Void) {
         
         NetworkingManager.shared.getRequest(url: getBooksUrl, callback: {(books, success) in
             
