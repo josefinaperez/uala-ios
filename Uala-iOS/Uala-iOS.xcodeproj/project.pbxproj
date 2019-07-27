@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5F8B0F8F06791651DAB024B3 /* Pods_Uala_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B454D4A3A1CD0A22E83FEE8 /* Pods_Uala_iOS.framework */; };
 		D934627422EC87AD0035CE86 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934627322EC87AD0035CE86 /* NetworkingManager.swift */; };
+		D934627622EC8ADC0035CE86 /* BooksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934627522EC8ADC0035CE86 /* BooksManager.swift */; };
+		D934627822EC8AF20035CE86 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934627722EC8AF10035CE86 /* Book.swift */; };
 		D9A1B96F22EC855F00753EC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A1B96E22EC855F00753EC4 /* AppDelegate.swift */; };
 		D9A1B97122EC855F00753EC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A1B97022EC855F00753EC4 /* ViewController.swift */; };
 		D9A1B97422EC855F00753EC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A1B97222EC855F00753EC4 /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 		3B454D4A3A1CD0A22E83FEE8 /* Pods_Uala_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Uala_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBE8485543BB4A37EB0006DB /* Pods-Uala-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uala-iOS.release.xcconfig"; path = "Target Support Files/Pods-Uala-iOS/Pods-Uala-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		D934627322EC87AD0035CE86 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		D934627522EC8ADC0035CE86 /* BooksManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksManager.swift; sourceTree = "<group>"; };
+		D934627722EC8AF10035CE86 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		D9A1B96B22EC855F00753EC4 /* Uala-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Uala-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A1B96E22EC855F00753EC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9A1B97022EC855F00753EC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 				D9A1B97722EC856000753EC4 /* LaunchScreen.storyboard */,
 				D9A1B97A22EC856000753EC4 /* Info.plist */,
 				D934627322EC87AD0035CE86 /* NetworkingManager.swift */,
+				D934627522EC8ADC0035CE86 /* BooksManager.swift */,
+				D934627722EC8AF10035CE86 /* Book.swift */,
 			);
 			path = "Uala-iOS";
 			sourceTree = "<group>";
@@ -208,6 +214,8 @@
 			files = (
 				D934627422EC87AD0035CE86 /* NetworkingManager.swift in Sources */,
 				D9A1B97122EC855F00753EC4 /* ViewController.swift in Sources */,
+				D934627622EC8ADC0035CE86 /* BooksManager.swift in Sources */,
+				D934627822EC8AF20035CE86 /* Book.swift in Sources */,
 				D9A1B96F22EC855F00753EC4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
