@@ -57,6 +57,11 @@ class BooksListViewController: UIViewController, UITableViewDelegate, UITableVie
         bookDetailController.book = books[indexPath.row]
         navigationController?.pushViewController(bookDetailController, animated: true)
     }
+    
+    @IBAction fileprivate func reverseBooksOrder () {
+        books.reverse()
+        booksTable.reloadData()
+    }
 
 }
 
