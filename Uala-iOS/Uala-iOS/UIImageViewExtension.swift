@@ -8,20 +8,19 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 extension UIImageView {
     
     public func downloadImage(from urlString: String) {
-       
+        
+        let placeholder = UIImage(named: "placeholder")
+        
         guard let url = URL(string: urlString) else {
+            self.image = placeholder
             return
         }
         
-        NetworkingManager.shared.getData(from: url) { data, response, error in
-            guard let data = data, error == nil else { return }
-            DispatchQueue.main.async() {
-                self.image = UIImage(data: data)
-            }
-        }
+        self.kf.setImage(with: url, placeholder: placeholder)
     }
 }

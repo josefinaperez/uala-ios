@@ -8,4 +8,5 @@ target 'Uala-iOS' do
   # Pods for Uala-iOS
 	pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod 'Kingfisher'
 end
