@@ -23,11 +23,12 @@ class NetworkingManager: NSObject {
                     callback(nil, false)
                 }
                 
-                guard let json = response.result.value as? JSON else {
+                guard let response = response.result.value as? Data else {
                     callback(nil, false)
                     return
                 }
                 
+                let json = JSON(response)
                 callback(json, true)
         }
     }
