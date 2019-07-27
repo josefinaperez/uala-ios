@@ -49,6 +49,13 @@ class BooksListViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let bookDetailController = storyboard?.instantiateViewController(withIdentifier: "bookDetailController")
+            as? BookDetailViewController else {
+            return
+        }
+        
+        bookDetailController.book = books[indexPath.row]
+        navigationController?.pushViewController(bookDetailController, animated: true)
     }
 
 }

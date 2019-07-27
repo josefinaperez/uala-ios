@@ -17,7 +17,7 @@ class BookTableViewCell: UITableViewCell {
     @IBOutlet fileprivate var lblEstado: UILabel!
 
     public func configureWith(book: Book) {
-        if bookImg.image == nil { bookImg.downloadImage(from: book.imagen) }
+        bookImg.downloadImage(from: book.imagen)
         lblNombre.text = book.nombre
         lblAutor.text = book.autor
         lblPopularidad.text = "\(book.popularidad)"

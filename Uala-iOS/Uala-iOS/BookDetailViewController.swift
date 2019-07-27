@@ -24,7 +24,8 @@ class BookDetailViewController: UIViewController {
     }
     
     fileprivate func configureWith(book: Book) {
-        if bookImg.image == nil { bookImg.downloadImage(from: book.imagen) }
+        self.title = book.nombre
+        bookImg.downloadImage(from: book.imagen)
         lblNombre.text = book.nombre
         lblAutor.text = book.autor
         lblPopularidad.text = "\(book.popularidad)"

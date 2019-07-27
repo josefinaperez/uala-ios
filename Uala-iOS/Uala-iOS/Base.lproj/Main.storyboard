@@ -150,7 +150,7 @@
         <!--Book Detail View Controller-->
         <scene sceneID="05x-wC-95e">
             <objects>
-                <viewController id="Nk0-Gh-zU6" customClass="BookDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="bookDetailController" id="Nk0-Gh-zU6" customClass="BookDetailViewController" customModule="Uala_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Yc-Yc-OAh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -206,6 +206,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kAW-fz-2ie"/>
                     </view>
+                    <connections>
+                        <outlet property="bookImg" destination="NQn-8p-IIF" id="hQK-d3-abe"/>
+                        <outlet property="lblAutor" destination="Rh6-tQ-0ir" id="gQ1-JO-cPM"/>
+                        <outlet property="lblEstado" destination="FjR-PJ-M1D" id="NhL-Lb-N2Y"/>
+                        <outlet property="lblNombre" destination="kju-sK-C1B" id="7dZ-Ru-dmP"/>
+                        <outlet property="lblPopularidad" destination="3qp-lG-st8" id="drp-Sh-KXk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6zo-L0-Y4N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
