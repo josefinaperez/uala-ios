@@ -11,6 +11,7 @@
 		D934627422EC87AD0035CE86 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934627322EC87AD0035CE86 /* NetworkingManager.swift */; };
 		D934627622EC8ADC0035CE86 /* BooksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934627522EC8ADC0035CE86 /* BooksManager.swift */; };
 		D934627822EC8AF20035CE86 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934627722EC8AF10035CE86 /* Book.swift */; };
+		D934627A22EC91380035CE86 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934627922EC91380035CE86 /* BookTableViewCell.swift */; };
 		D9A1B96F22EC855F00753EC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A1B96E22EC855F00753EC4 /* AppDelegate.swift */; };
 		D9A1B97122EC855F00753EC4 /* BooksListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A1B97022EC855F00753EC4 /* BooksListViewController.swift */; };
 		D9A1B97422EC855F00753EC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A1B97222EC855F00753EC4 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		D934627322EC87AD0035CE86 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		D934627522EC8ADC0035CE86 /* BooksManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksManager.swift; sourceTree = "<group>"; };
 		D934627722EC8AF10035CE86 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		D934627922EC91380035CE86 /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		D9A1B96B22EC855F00753EC4 /* Uala-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Uala-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A1B96E22EC855F00753EC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9A1B97022EC855F00753EC4 /* BooksListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksListViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				D934627322EC87AD0035CE86 /* NetworkingManager.swift */,
 				D934627522EC8ADC0035CE86 /* BooksManager.swift */,
 				D934627722EC8AF10035CE86 /* Book.swift */,
+				D934627922EC91380035CE86 /* BookTableViewCell.swift */,
 			);
 			path = "Uala-iOS";
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				D9A1B97122EC855F00753EC4 /* BooksListViewController.swift in Sources */,
 				D934627622EC8ADC0035CE86 /* BooksManager.swift in Sources */,
 				D934627822EC8AF20035CE86 /* Book.swift in Sources */,
+				D934627A22EC91380035CE86 /* BookTableViewCell.swift in Sources */,
 				D9A1B96F22EC855F00753EC4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

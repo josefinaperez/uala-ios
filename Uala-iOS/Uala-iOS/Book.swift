@@ -11,18 +11,18 @@ import SwiftyJSON
 
 class Book: NSObject {
     
-    fileprivate var id: String
-    fileprivate var nombre: String
-    fileprivate var autor: String
-    fileprivate var disponibilidad: Bool
-    fileprivate var popularidad: Int
-    fileprivate var imagen: String
+    public var id: String
+    public var nombre: String
+    public var autor: String
+    public var disponible: Bool
+    public var popularidad: Int
+    public var imagen: String
     
     init(json: JSON) {
         id = json["id"].stringValue
         nombre = json["nombre"].stringValue
         autor = json["autor"].stringValue
-        disponibilidad = json["nombre"].boolValue
+        disponible = json["disponibilidad"].boolValue
         popularidad = json["popularidad"].intValue
         imagen = json["imagen"].stringValue
     }
