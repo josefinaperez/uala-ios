@@ -28,7 +28,7 @@ class BookDetailViewController: UIViewController {
         bookImg.downloadImage(from: book.imagen)
         lblNombre.text = book.nombre
         lblAutor.text = book.autor
-        lblPopularidad.text = "\(book.popularidad)"
+        lblPopularidad.text = "Popularidad: \(book.popularidad)"
         lblEstado.text = book.disponible ? "Disponible" : "No disponible"
     }
 
