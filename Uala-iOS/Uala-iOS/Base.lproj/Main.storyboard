@@ -38,73 +38,72 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenidos a la biblioteca de Ualá" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkU-Pr-kyC">
-                                        <rect key="frame" x="75" y="14.5" width="264.5" height="21"/>
+                                        <rect key="frame" x="20" y="14.5" width="264.5" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.92941176469999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDY-QO-ZsE">
+                                        <rect key="frame" x="317" y="10" width="92" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Invertir orden">
+                                            <color key="titleColor" red="0.92941176469999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="reverseBooksOrder" destination="BYZ-38-t0r" eventType="touchUpInside" id="NhH-pK-0SQ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.027450980390000001" green="0.2470588235" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="hkU-Pr-kyC" firstAttribute="centerY" secondItem="6ow-Zp-91D" secondAttribute="centerY" id="3GU-hD-Owg"/>
-                                    <constraint firstItem="hkU-Pr-kyC" firstAttribute="centerX" secondItem="6ow-Zp-91D" secondAttribute="centerX" id="OWY-ba-rDv"/>
                                     <constraint firstAttribute="height" constant="50" id="U8P-xy-wHB"/>
+                                    <constraint firstAttribute="trailing" secondItem="FDY-QO-ZsE" secondAttribute="trailing" constant="5" id="aB2-S0-kI7"/>
+                                    <constraint firstItem="hkU-Pr-kyC" firstAttribute="leading" secondItem="6ow-Zp-91D" secondAttribute="leading" constant="20" id="dbd-Iz-pkl"/>
+                                    <constraint firstItem="FDY-QO-ZsE" firstAttribute="centerY" secondItem="6ow-Zp-91D" secondAttribute="centerY" id="fpS-wy-7AE"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="miJ-46-MfU">
                                 <rect key="frame" x="0.0" y="138" width="414" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDr-lk-MGg">
-                                        <rect key="frame" x="20" y="10" width="100" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="2xb-6Q-Rge"/>
-                                            <constraint firstAttribute="height" constant="30" id="U0R-as-wZB"/>
-                                        </constraints>
-                                        <state key="normal" title="Invertir orden"/>
-                                        <connections>
-                                            <action selector="reverseBooksOrder" destination="BYZ-38-t0r" eventType="touchUpInside" id="pEq-uQ-Tc5"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mostrar: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIM-g0-oOx">
-                                        <rect key="frame" x="125" y="14.5" width="69" height="21"/>
+                                        <rect key="frame" x="10" y="14.5" width="69" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQ8-nY-kAa">
-                                        <rect key="frame" x="202" y="10" width="80" height="30"/>
+                                        <rect key="frame" x="94" y="10" width="80" height="30"/>
                                         <state key="normal" title="Disponibles"/>
                                         <connections>
                                             <action selector="showAvailableBooks" destination="BYZ-38-t0r" eventType="touchUpInside" id="HvW-gD-Pah"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaA-Fc-JRj">
-                                        <rect key="frame" x="290" y="10" width="30" height="30"/>
-                                        <state key="normal" title="nd"/>
+                                        <rect key="frame" x="189" y="10" width="102" height="30"/>
+                                        <state key="normal" title="No disponibles"/>
                                         <connections>
                                             <action selector="showNotAvailableBooks" destination="BYZ-38-t0r" eventType="touchUpInside" id="klf-yI-SjK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOk-R6-duH">
-                                        <rect key="frame" x="328" y="10" width="35" height="30"/>
-                                        <state key="normal" title="Todo"/>
+                                        <rect key="frame" x="306" y="10" width="42" height="30"/>
+                                        <state key="normal" title="Todos"/>
                                         <connections>
                                             <action selector="showAllBooks" destination="BYZ-38-t0r" eventType="touchUpInside" id="5QU-EO-SnS"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="MaA-Fc-JRj" firstAttribute="leading" secondItem="OQ8-nY-kAa" secondAttribute="trailing" constant="8" id="1hT-SW-KfL"/>
-                                    <constraint firstItem="AIM-g0-oOx" firstAttribute="leading" secondItem="QDr-lk-MGg" secondAttribute="trailing" constant="5" id="1ya-Lg-YY9"/>
+                                    <constraint firstItem="MaA-Fc-JRj" firstAttribute="leading" secondItem="OQ8-nY-kAa" secondAttribute="trailing" constant="15" id="1hT-SW-KfL"/>
                                     <constraint firstItem="OQ8-nY-kAa" firstAttribute="centerY" secondItem="miJ-46-MfU" secondAttribute="centerY" id="6C9-d9-zWM"/>
                                     <constraint firstItem="MaA-Fc-JRj" firstAttribute="centerY" secondItem="miJ-46-MfU" secondAttribute="centerY" id="8ox-mp-amJ"/>
-                                    <constraint firstItem="JOk-R6-duH" firstAttribute="leading" secondItem="MaA-Fc-JRj" secondAttribute="trailing" constant="8" id="EPl-wi-2iB"/>
-                                    <constraint firstItem="QDr-lk-MGg" firstAttribute="leading" secondItem="miJ-46-MfU" secondAttribute="leading" constant="20" id="KXE-XH-P1S"/>
+                                    <constraint firstItem="JOk-R6-duH" firstAttribute="leading" secondItem="MaA-Fc-JRj" secondAttribute="trailing" constant="15" id="EPl-wi-2iB"/>
                                     <constraint firstItem="JOk-R6-duH" firstAttribute="centerY" secondItem="miJ-46-MfU" secondAttribute="centerY" id="V7R-mk-Pg7"/>
                                     <constraint firstItem="AIM-g0-oOx" firstAttribute="centerY" secondItem="miJ-46-MfU" secondAttribute="centerY" id="h1Z-OQ-fwD"/>
-                                    <constraint firstItem="QDr-lk-MGg" firstAttribute="centerY" secondItem="miJ-46-MfU" secondAttribute="centerY" id="vd4-oH-HBd"/>
-                                    <constraint firstItem="OQ8-nY-kAa" firstAttribute="leading" secondItem="AIM-g0-oOx" secondAttribute="trailing" constant="8" id="zFI-6e-o9g"/>
+                                    <constraint firstItem="AIM-g0-oOx" firstAttribute="leading" secondItem="miJ-46-MfU" secondAttribute="leading" constant="10" id="nci-5A-Hz4"/>
+                                    <constraint firstItem="OQ8-nY-kAa" firstAttribute="leading" secondItem="AIM-g0-oOx" secondAttribute="trailing" constant="15" id="zFI-6e-o9g"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qdh-GD-zIh">
