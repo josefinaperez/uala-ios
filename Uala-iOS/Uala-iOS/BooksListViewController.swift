@@ -13,6 +13,7 @@ class BooksListViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet fileprivate var booksTable: UITableView!
     
     fileprivate var books: [Book] = []
+    fileprivate var reversedBookOrder: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,7 @@ class BooksListViewController: UIViewController, UITableViewDelegate, UITableVie
                 return
             }
             
-            self.books = books.sorted(by: { $0.popularidad > $1.popularidad })
+            self.books = BooksManager.shared.sortByPopularity(books: books, reversed: self.reversedBookOrder)
             self.booksTable.reloadData()
         })
     }
@@ -59,7 +60,26 @@ class BooksListViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     @IBAction fileprivate func reverseBooksOrder () {
+        reversedBookOrder = !reversedBookOrder
         books.reverse()
+        booksTable.reloadData()
+    }
+    
+    @IBAction fileprivate func showAvailableBooks() {
+        let booksFiltered = BooksManager.shared.filterByAvailability(available: true)
+        books = BooksManager.shared.sortByPopularity(books: booksFiltered, reversed: reversedBookOrder)
+        booksTable.reloadData()
+    }
+    
+    @IBAction fileprivate func showNotAvailableBooks() {
+        let booksFiltered = BooksManager.shared.filterByAvailability(available: false)
+        books = BooksManager.shared.sortByPopularity(books: booksFiltered, reversed: reversedBookOrder)
+        booksTable.reloadData()
+    }
+    
+    @IBAction fileprivate func showAllBooks() {
+        let booksFiltered = BooksManager.shared.getAllBooks()
+        books = BooksManager.shared.sortByPopularity(books: booksFiltered, reversed: reversedBookOrder)
         booksTable.reloadData()
     }
 

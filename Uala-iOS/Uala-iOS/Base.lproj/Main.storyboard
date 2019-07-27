@@ -65,11 +65,46 @@
                                             <action selector="reverseBooksOrder" destination="BYZ-38-t0r" eventType="touchUpInside" id="pEq-uQ-Tc5"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mostrar: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIM-g0-oOx">
+                                        <rect key="frame" x="125" y="14.5" width="69" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQ8-nY-kAa">
+                                        <rect key="frame" x="202" y="10" width="80" height="30"/>
+                                        <state key="normal" title="Disponibles"/>
+                                        <connections>
+                                            <action selector="showAvailableBooks" destination="BYZ-38-t0r" eventType="touchUpInside" id="HvW-gD-Pah"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaA-Fc-JRj">
+                                        <rect key="frame" x="290" y="10" width="30" height="30"/>
+                                        <state key="normal" title="nd"/>
+                                        <connections>
+                                            <action selector="showNotAvailableBooks" destination="BYZ-38-t0r" eventType="touchUpInside" id="klf-yI-SjK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOk-R6-duH">
+                                        <rect key="frame" x="328" y="10" width="35" height="30"/>
+                                        <state key="normal" title="Todo"/>
+                                        <connections>
+                                            <action selector="showAllBooks" destination="BYZ-38-t0r" eventType="touchUpInside" id="5QU-EO-SnS"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="MaA-Fc-JRj" firstAttribute="leading" secondItem="OQ8-nY-kAa" secondAttribute="trailing" constant="8" id="1hT-SW-KfL"/>
+                                    <constraint firstItem="AIM-g0-oOx" firstAttribute="leading" secondItem="QDr-lk-MGg" secondAttribute="trailing" constant="5" id="1ya-Lg-YY9"/>
+                                    <constraint firstItem="OQ8-nY-kAa" firstAttribute="centerY" secondItem="miJ-46-MfU" secondAttribute="centerY" id="6C9-d9-zWM"/>
+                                    <constraint firstItem="MaA-Fc-JRj" firstAttribute="centerY" secondItem="miJ-46-MfU" secondAttribute="centerY" id="8ox-mp-amJ"/>
+                                    <constraint firstItem="JOk-R6-duH" firstAttribute="leading" secondItem="MaA-Fc-JRj" secondAttribute="trailing" constant="8" id="EPl-wi-2iB"/>
                                     <constraint firstItem="QDr-lk-MGg" firstAttribute="leading" secondItem="miJ-46-MfU" secondAttribute="leading" constant="20" id="KXE-XH-P1S"/>
+                                    <constraint firstItem="JOk-R6-duH" firstAttribute="centerY" secondItem="miJ-46-MfU" secondAttribute="centerY" id="V7R-mk-Pg7"/>
+                                    <constraint firstItem="AIM-g0-oOx" firstAttribute="centerY" secondItem="miJ-46-MfU" secondAttribute="centerY" id="h1Z-OQ-fwD"/>
                                     <constraint firstItem="QDr-lk-MGg" firstAttribute="centerY" secondItem="miJ-46-MfU" secondAttribute="centerY" id="vd4-oH-HBd"/>
+                                    <constraint firstItem="OQ8-nY-kAa" firstAttribute="leading" secondItem="AIM-g0-oOx" secondAttribute="trailing" constant="8" id="zFI-6e-o9g"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qdh-GD-zIh">
